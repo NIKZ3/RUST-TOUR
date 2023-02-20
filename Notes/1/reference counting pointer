@@ -1,0 +1,14 @@
+
+Can be used in single threaded only
+
+1. It keeps count of number of references of that type being used.
+2. used when multiple actors are accessing the value and cant be determined who will be the last to use the value.
+3. The references are read-only.
+4. It allows multiple actors to share ownership without value being moved from one place to other.
+
+Chatgpt Summary:
+Rc<T> is a reference counted smart pointer in Rust that is used for cases when a single value might have multiple owners. Rc<T> 
+keeps track of the number of references to a value and when there are zero references, the value can be cleaned up.
+It is used when data needs to be allocated on the heap and multiple parts of a program need to read it, but it's not possible to determine at compile time which part will finish using the data last. 
+It is important to note that Rc<T> is only for use in single-threaded scenarios and cannot be used in multithreaded programs. In contrast to Box<T>, Rc<T> allows multiple parts of a program to share ownership of a single value without 
+the ownership being moved from one part to another, which solves the problem of a value being moved and not usable again.

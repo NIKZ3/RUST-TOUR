@@ -1,0 +1,28 @@
+
+Ownership:- IT basically helps to deallocate memory once data goes out of scope without slowing system down
+    It also avoid bugs like data races due to different threads changing same memory.
+    IT avoids deallocating same section of memory twice.
+
+1. when we pass to function ownership moved to function
+2. If we pass by reference ownership stays intact but function can still access value
+3. At one time there can only be one mutable reference. (avoids data race in long term)
+4. There can be multiple immutable references.
+
+1.
+    let mut x = String::from("stat")
+
+    func(x) # ownership moved to function. 
+    func(&x) #ownership stays in current block but function can access
+    func(&mut x) #ownership stays in current block but function can access/manipulate
+
+2. 
+
+# this function owns x
+func(x: string)
+{
+    return x #ownership returned to previous scope
+}
+
+
+
+

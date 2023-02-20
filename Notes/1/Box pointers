@@ -1,0 +1,10 @@
+
+1. Box pointer is jst a pointer -> data in box pointer is stored on heap
+    i. It implements deref trait for dereferencing the pointer. ( *x ).
+
+2. We can implement our own pointers by implementing deref traits for the implemented structs.
+
+3. deref coercion -> it allows us to pass parameters of one pointer type to functions having different pointer types.
+    this is done by calling deref function chain of each underlying object of a pointer till we find correct pointer type.
+
+How Deref Coercion Interacts with Mutability (Chapter 15.2)

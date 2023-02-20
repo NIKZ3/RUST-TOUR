@@ -1,0 +1,10 @@
+
+1. Inline anonymous functions
+2. clojures can capture their environment .
+3. clojures can be made to move all environment to their body using move keyword. (Mostly used in multithreading when you want to move data to different thread so that it stays relevant in that thread and doesnt become dead when prev thread dies)
+4. Have 3 Traits
+    i. FnOnce -> When a variable is capture from environment and passed out of body. (can be called once)
+    ii. FnMut -> Might modify value but doesnt move anything. (can be called more than once)
+    iii. Fn -> doesnt modify doesnt move (can be called multiple times)
+
+5. Examples:- unwrap_or_else -> requires a clojure of type FnOnce that returns T(generic parameter)

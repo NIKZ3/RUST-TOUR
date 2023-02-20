@@ -1,0 +1,4 @@
+
+1. Traits are characteristics of objects (basically methods that can be implemented or sometimes default implementation present).
+2. Traits can be used to conditionally generate code using trait bounds.
+3. We can have parameters/return times that implement certain trait.

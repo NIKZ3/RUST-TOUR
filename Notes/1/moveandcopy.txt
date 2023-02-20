@@ -1,0 +1,21 @@
+
+1. Depending upon types scalar are copied on stack whereas values like are not copied but moved from one variable to other
+
+Ex.
+
+    This copies value
+    let x = 10
+    y = x
+
+    print(x,y) # works
+
+    This moves value
+    let s = String::from("data1")
+    let d = s  #data moved instead of copy ( i.e. s now is invalidated but data it was pointing to is pointed by d)
+
+    print(s) # errors out
+    print(d) # works
+
+2. If you want any data type to get copied instead of moved we will have to implement copy() trait.
+3. copy trait cant be implemeneted if we have already implemented drop() trait
+

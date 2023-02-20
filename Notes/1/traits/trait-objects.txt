@@ -1,0 +1,10 @@
+
+1. object which is a vector of objects implementing trait Draw.
+    pub components: Vec<Box<dyn Draw>>
+
+2. Trait objects can be used for inheritance. where in you could have a struct with trait objects that implement particular trait so that can be used blindly by our implementation.
+
+Generics Vs Trait Objects
+
+3.  pub components: Vec<Box<dyn Draw>> -> This allows you store any type that implements a certain trait. (Trait objects)
+    pub components: Vec<T> -> This only allows single type either some struct or int etc. (Generics)

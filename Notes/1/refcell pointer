@@ -1,0 +1,4 @@
+
+1. refcell pointer allows modifying a immutable refernce using borrow_mut()
+
+2. can be combined with RC pointer so that there are multiple immutable owners but due to combination with refcell they can also modify the value

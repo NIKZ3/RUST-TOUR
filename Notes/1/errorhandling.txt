@@ -1,0 +1,11 @@
+
+1. Functions return option or Result
+    i. option consists of two possiblities -> Some(some value) or None which means NULL
+    ii. Result -> Ok(value returned) , Err(Error)
+
+2. We can use match expression to match against these.
+3. We can use helpers present on result like unwrap(returns value or panics), unwrap_or_else(panic handling by user defined logic)
+4. We can use '?' operator for early return that is instead of panicing error is returned to calling function.
+
+5.  i. Result.map_err(|_| SummationError)? This is how we could convert one error to some other type of error . (Reference: https://www.youtube.com/watch?v=f82wn-1DPas)
+    ii.Result.map_err(|Err| SummationError)? Here we could use err to construct new error object.

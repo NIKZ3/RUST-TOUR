@@ -1,0 +1,2 @@
+
+1. Refcell pointer is used so that we can mutate a immutable reference (Pretty strange lol)
